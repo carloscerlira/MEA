@@ -1,0 +1,220 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 15cm
+\topmargin = -2.5cm 
+\oddsidemargin = 1.5cm
+\usepackage{amsmath}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{bm} 
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\title{Tarea 4 Mecánica Analítica}
+\author{Cerritos Lira Carlos}
+\date{2 de Marzo del 2020}
+
+\begin{document}
+\maketitle
+\section*{Problemas}
+\subsection*{1.-}
+\subsubsection*{2.11)}
+Obtener el radio de curvatura de una curva plana en:
+\begin{enumerate}[a)]
+    \item Coordenadas rectangulares
+    \item Coordenadas polares
+\end{enumerate}
+\begin{tcolorbox}
+\subsubsection*{a)}
+Nuestra curva esta parametrizada por:
+\[ \bm{\gamma}(x) 
+= x \bm{i} +  f(x) \bm{j} \]
+haciendo cuentas:
+\begin{align*}
+    \bm{\gamma}'(x) &= \bm{i} + f'(x)\bm{j} \\
+    \bm{\gamma}''(x) &= f''(x)\bm{j} \\
+    \bm{\gamma}'(x) \times \bm{\gamma}''(x)
+    &= f''(x)\bm{k}
+\end{align*}
+de donde obtenemos el radio de curvatura en el punto $\bm{\gamma}(x)$ es:
+\begin{align*}
+    \rho(\phi)
+    &= \frac
+    {\norm{\bm{\gamma}(x)}^3}
+    {\norm{\bm{\gamma}'(x) \times \bm{\gamma}''(x)}} \\
+    &= \frac
+    {|1+f'(x)^2|^\frac{3}{2}}
+    {|f''(x)|}
+\end{align*}
+
+\subsubsection*{b)}
+Nuestra curva esta parametrizada por:
+\[ \bm{\gamma}(\phi) = r(\phi)\bm{e_\phi} \]
+haciendo cuentas:
+\begin{align*}
+    \bm{\gamma}'(\phi) 
+    &= r'(\phi)\bm{e_\phi} + r(\phi)\bm{e_\theta} \\
+    \bm{\gamma}''(\phi)
+    &= r''(\phi)\bm{e_\phi} + r'(\phi)\bm{e_\theta}
+    + r'(\phi)\bm{e_\theta} - r(\phi)\bm{e_\phi} \\
+    \bm{\gamma}'(\phi) \times \bm{\gamma}''(\phi)
+    &= 2r'(\phi)^2 \bm{k} 
+    - r(\phi)r''(\phi) \bm{k} + r(\phi)^2 \bm{k}
+\end{align*}
+de donde obtenemos el radio de curvatura en el punto $\bm{\gamma}(\phi)$ es:
+\begin{align*}
+    \rho(\phi)
+    &= \frac
+    {\norm{\bm{\gamma}(\phi)}^3}
+    {\norm{\bm{\gamma}'(\phi) \times \bm{\gamma}''(\phi)}} \\
+    &= \frac
+    {(r(\phi)^2 + r'(\phi)^2)^\frac{3}{2}}
+    {| 2r'(\phi)^2 + r(\phi)^2 - r(\phi)r''(\phi)|}
+\end{align*}
+\end{tcolorbox}
+
+\subsection*{2.-}
+\subsubsection*{2.12)}
+Obtener las componentes tangencial y normal de las velocidades y las aceleraciones
+de las partículas de los problemas $2.1 b)$
+\begin{tcolorbox}
+    La posición, velocidad y aceleración:
+    \begin{align*}
+        \bm{r}(t) &=  3t\bm{i} - 4t\bm{j} + (t^2+3)\bm{k} \\
+        \bm{v}(t) &= 3\bm{i} - 4\bm{j} + 2t\bm{k} \\
+        \bm{a}(t) &= 2\bm{k}
+    \end{align*}
+    Para la velocidad la componente tangencial y perpendicular a la curva es:
+    \begin{align*}
+        \bm{v_\parallel}(t) &= 0 \\ 
+        \bm{v_\bot}(t) &= \bm{v}(t)
+    \end{align*}
+    Para la aceleración la componente tangencial y perpendicular a la curva es:
+    \begin{align*}
+        \bm{a_\parallel}(t) 
+        &= (\bm{u_t}(t) \cdot \bm{a}(t)) \bm{u_t}(t) \\
+        &= \frac{1}{\norm{\bm{v}(t)}^2} (\bm{v}(t) \cdot \bm{a}(t))\bm{v}(t) \\
+        &= \frac{4t}{\norm{\bm{v}(t)}^2}\bm{v}(t) \\
+        \bm{a_\bot}(t) 
+        &= \bm{a}(t) - \bm{a_\parallel}(t) \\
+        &= \bm{a}(t) - \frac{4t}{\norm{\bm{v}(t)}^2}\bm{v}(t)
+    \end{align*}       
+    \end{tcolorbox}
+
+\subsection*{3.-}
+\subsubsection*{2.13)}
+Obtener el radio de curvatura de las curvas de los problemas $2.1 b)$ para el punto en que está situado la partícula en el instante $t$.
+\begin{tcolorbox}
+Nuestra curva esta parametrizada por:
+\[ \bm{r}(t) = 3t\bm{i} - 4t\bm{j} + (t^2 + 3)\bm{k}\] 
+haciendo cuentas:
+\begin{align*}
+    \bm{r'}(t) &= 3\bm{i} - 4\bm{j} + 2t\bm{k} \\
+    \bm{r''}(t) &= 2\bm{k} \\
+    \bm{r'}(t) \times \bm{r''}(t) &= -6\bm{j} - 8\bm{i}
+\end{align*}
+de donde obtenemos el radio de curvatura en el punto $\bm{r}(t)$ es:
+\begin{align*}
+    \rho(t) &= \frac
+    {\norm{\bm{r}(t)}^3}
+    {\norm{\bm{r'}(t) \times \bm{r''}(t)}} \\
+    &= \frac
+    {(9t^2 + 16t^3 + (t^3+3)^2)^\frac{3}{2}}
+    {|36 + 64|^\frac{1}{2}} \\
+    &= \frac
+    {(9t^2 + 16t^3 + (t^3+3)^2)^\frac{3}{2}}
+    {10}
+\end{align*}
+\end{tcolorbox}
+
+\subsection*{4.-}
+\subsubsection*{2.15)}
+En el punto $(2,1,1)$, obtener el vector unidad tangente a la intersección de la 
+superficie del problema $2.14$ y a la superficie:
+\[ \phi_2(x,y,z) = 3x^2-xy+y^2=11\]
+\begin{tcolorbox}
+    El vector tangente a la intersección de superficies esta dado por:
+    \[ \bm{e_t}(\bm{x}) = \nabla \phi_1 (\bm{x}) \times \nabla \phi_2 (\bm{x}) \]
+    haciendo cuentas obtenemos:
+    \begin{align*}
+        \nabla \phi_1 (\bm{x})
+        &= (2x+2y)\bm{i} + (2x-2y+z)\bm{j} + (y+2z)\bm{k}\\
+        \nabla \phi_2 (\bm{x})
+        &= (6x-y)\bm{i} + (-x+2y)\bm{j}\\
+        \bm{e_t}(2,2,1)
+        &=\nabla \phi_1(2,2,1) \times \nabla \phi_2(2,2,1) \\
+        &= (6\bm{i} + 3\bm{j} + 3\bm{z}) \times 11\bm{i} \\
+        &= 33\bm{j} -33\bm{k}
+    \end{align*}
+    finalmente nuestro vector unitario es:
+    \begin{align*}
+        \bm{u_t} 
+        &= \frac{\bm{e_t}}{\norm{\bm{e_t}}} \\
+        &= \frac{1}{33\sqrt{2}} (33\bm{j} -33\bm{k}) \\
+        &= \frac{1}{\sqrt{2}} (\bm{j} - \bm{k})
+    \end{align*}
+\end{tcolorbox}
+\subsection*{5.-}
+\subsubsection*{3.1)}
+Un helicóptero aterriza con un viento cruzando en un barco en movimiento, desde el cual se observa que desciende verticalmente a 10 nudos. Si el barco tiene una velocidad de avance de 20 nudos y el viendo cruzado está soplando perpendicularmente al curso del barco a 20 nudos, encontrar la velocidad del helicóptero a través del aire.
+\begin{tcolorbox}
+Consideremos $S$ el sistema de un observador en reposo y $S'$ el sistema de un observador en el barco, la posición del helicóptero en el sistema $S$ está dada por:
+\[ \bm{r} = \bm{R} + \bm{r'} \]
+de donde obtenemos:
+\begin{align*}
+    \bm{v} 
+    &= \bm{V} + \bm{v'} \\
+    &= (20\bm{i} - 20\bm{j}) +(-10\bm{k}) \\
+    &= 20\bm{i} - 20\bm{j} - 10\bm{k}
+\end{align*}
+donde la velocidad es:
+\begin{align*}
+    v &= \norm{\bm{v}} \\
+    v &= (20^2 + 20^2 + 10^2)^\frac{1}{2} \\
+    v &= 30 nudos    
+\end{align*}
+\end{tcolorbox}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
