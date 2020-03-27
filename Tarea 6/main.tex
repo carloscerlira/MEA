@@ -32,23 +32,41 @@ constante $\Omega$. si el niño está a una distancia $c$ del eje de rotación,
 hallése una expresión de su aceleración relativa al suelo en funcion de $\Omega, c, h_0, w$ 
 y $t$. 
 \begin{tcolorbox}[breakable]
-    
+    Sea $r$ la función que regresa la posición para un tiempo $t$, se tiene:
+    \begin{align*}
+        \bm{r} &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
+        \bm{v} &= -c\Omega\bm{e_\theta} + h_0wcos(wt)\bm{k} \\
+        \bm{a} &= -c\Omega^2\bm{e_r} - h_0w^2sin(wt)\bm{k} 
+    \end{align*}
 \end{tcolorbox}
 
-\subsection*{2.-}
+\section*{2.-}
 \subsection*{4.2)}
 Encontrar la posición en un tiempo $t$ de una partícula de masa $m$, cuando la fuerza aplicada
 es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
 \begin{tcolorbox}[breakable]
-    
+    Tenemos la siguiente información:
+    \begin{align*}
+        \bm{a} &= 2cos(wt) \bm{i} \\
+        \bm{v} &= \left(\frac{2}{w}sin(wt) + v_0 \right)\bm{i} \\ 
+        \bm{x} &= \left(-\frac{2}{w^2}cos(wt) + v_0t + \frac{2}{w^2} + x_0 \right) \bm{i}
+    \end{align*}
+    podemos encontrar el valor de $v_0$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b$
+    de donde tenemos:
+    \begin{align*}
+        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2}}
+    \end{align*}
 \end{tcolorbox}
 
-\subsection*{3.-}
+\section*{3.-}
 \subsection*{4.4)}
 \begin{enumerate}[a)]
-    \item Si la velocidad límite de ca´dia de un hombre de $80kg$, con paracaídas, es 
+    \item Si la velocidad límite de caída de un hombre de $80kg$, con paracaídas, es 
     la misma que tendría al caer libremente $0.75m$; hallar el valor de esta velocidad 
     límite y la constante de amortiguamiento $k$ (supóngase $F_{amort} = -mkv$)
+    \item Supongamos ahora que el hombre cae libremente (partiendo del reposo) durante 
+    5 segundos y que después abre su paracaídas. Luego de otros 5 segundos, ¿cual será su 
+    velocidad? 
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     
@@ -56,7 +74,7 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
 
 \section*{4.-}
 \subsection*{4.7)}
-Una partícula de masa $m$ tiene aplicada una fuerza $F=-kx^2$. Si $\cdot{x} = v_0$ 
+Una partícula de masa $m$ tiene aplicada una fuerza $F=-kx^2$. Si $\dot{x} = v_0$ 
 cuando $x=0$, hállese:
 \begin{enumerate}[a)]
     \item la ecuación de la energía

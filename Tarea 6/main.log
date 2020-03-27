@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.29)  24 MAR 2020 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.29)  26 MAR 2020 21:16
 entering extended mode
 **"c:/Users/i5 8400/Desktop/6th semester/MEA/Tarea 6/main.tex"
 ("c:/Users/i5 8400/Desktop/6th semester/MEA/Tarea 6/main.tex"
@@ -557,17 +557,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 
 {C:/Users/i5 8400/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] ("c:\Users\i5 8400\Desktop\6th semester\MEA\Tarea 6\main.aux") ) 
 Here is how much of TeX's memory you used:
- 21098 strings out of 481280
- 452840 string characters out of 2905613
- 715129 words of memory out of 3000000
- 36209 multiletter control sequences out of 15000+200000
- 542967 words of font info for 60 fonts, out of 3000000 for 9000
+ 21101 strings out of 481280
+ 452942 string characters out of 2905613
+ 716129 words of memory out of 3000000
+ 36213 multiletter control sequences out of 15000+200000
+ 542632 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,6n,103p,881b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\i5 8400\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "c:\Users\i5 8400\Desktop\6th semester\MEA\Tarea 6\main.pdf" (2 pages, 102225 bytes).
+ 64i,11n,103p,881b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/i5 8400/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "c:\Users\i5 8400\Desktop\6th semester\MEA\Tarea 6\main.pdf" (2 pages, 135927 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
