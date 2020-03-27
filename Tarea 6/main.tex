@@ -32,7 +32,7 @@ constante $\Omega$. si el niño está a una distancia $c$ del eje de rotación,
 hallése una expresión de su aceleración relativa al suelo en funcion de $\Omega, c, h_0, w$ 
 y $t$. 
 \begin{tcolorbox}[breakable]
-    Sea $r$ la función que regresa la posición para un tiempo $t$, se tiene:
+    Sea $\bm{r}$ la función que regresa la posición para un tiempo $t$, se tiene:
     \begin{align*}
         \bm{r} &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
         \bm{v} &= -c\Omega\bm{e_\theta} + h_0wcos(wt)\bm{k} \\
@@ -82,7 +82,28 @@ cuando $x=0$, hállese:
     \item la velocidad en cualquier posición
 \end{enumerate} 
 \begin{tcolorbox}[breakable]
-    
+    \subsection*{a)}
+    Encontramos una energía potencial que satisface $U_0 = 0$ usando la relación:
+    \begin{align*}
+        U(x)
+        &= -\int_0^x F(x')dx' \\
+        &= \frac{k}{3}x^3  
+    \end{align*}
+    por el teorema del trabajo y la energía se tiene la relación:
+    \begin{align*}
+        U + K &= U_0 + K_0 \\
+        \frac{k}{3}x^3 + \frac{1}{2}m\dot{x}^2 &= \frac{1}{2}mv_0^2 = E
+    \end{align*}
+    \subsection*{b)}
+    En el punto de retorno se satisface $U = E \implies \dot{x} = 0$, despejando obtenemos:
+    \begin{align*}
+        x &= \left(\frac{3m}{2k}v_0^2\right)^{\frac{1}{3}}
+    \end{align*} 
+    \subsection*{c)}
+    Despejando $\dot{x}$ obtenemos:
+    \begin{align*}
+        \dot{x} &= \sqrt{v_0^2 - \frac{2k}{3m}x^3}
+    \end{align*} 
 \end{tcolorbox}
 
 \section*{5.-}
