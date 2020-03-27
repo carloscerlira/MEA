@@ -32,9 +32,9 @@ constante $\Omega$. si el niño está a una distancia $c$ del eje de rotación,
 hallése una expresión de su aceleración relativa al suelo en funcion de $\Omega, c, h_0, w$ 
 y $t$. 
 \begin{tcolorbox}[breakable]
-    Sea $\bm{r}$ la función que regresa la posición para un tiempo $t$, se tiene:
+    Sea $\bm{x}$ la función que regresa la posición para un tiempo $t$, se tiene:
     \begin{align*}
-        \bm{r} &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
+        \bm{x} &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
         \bm{v} &= -c\Omega\bm{e_\theta} + h_0wcos(wt)\bm{k} \\
         \bm{a} &= -c\Omega^2\bm{e_r} - h_0w^2sin(wt)\bm{k} 
     \end{align*}
@@ -49,12 +49,14 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
     \begin{align*}
         \bm{a} &= 2cos(wt) \bm{i} \\
         \bm{v} &= \left(\frac{2}{w}sin(wt) + v_0 \right)\bm{i} \\ 
-        \bm{r} &= \left(-\frac{2}{w^2}cos(wt) + v_0t + \frac{2}{w^2} + x_0 \right) \bm{i}
+        \bm{x} &= \left(-\frac{2}{w^2}cos(wt) + v_0t + \frac{2}{w^2} + x_0 \right) \bm{i}
     \end{align*}
-    podemos encontrar el valor de $v_0$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b$
-    de donde tenemos:
+    donde 
+    \[x_0 = 8 \]
+    podemos encontrar el valor de $v_0$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b\bm{i}$
+    , de donde obtenemos:
     \begin{align*}
-        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2}}
+        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2w}}
     \end{align*}
 \end{tcolorbox}
 
