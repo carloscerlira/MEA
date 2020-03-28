@@ -25,7 +25,7 @@
 \maketitle
 \section*{Problemas}
 \section*{1.-}
-\subsection*{3.4)}
+\subsubsection*{3.4)}
 Un niño monta un "caballito" que sube y baja sinusoidalemtne $h=h_0sin(wt)$ con 
 relación a un tiovivo que gira alrededor de la vertical con una velocidad(tangencial)
 constante $\Omega$. si el niño está a una distancia $c$ del eje de rotación, 
@@ -54,27 +54,27 @@ y $t$.
 \end{tcolorbox}
 
 \section*{2.-}
-\subsection*{4.2)}
+\subsubsection*{4.2)}
 Encontrar la posición en un tiempo $t$ de una partícula de masa $m$, cuando la fuerza aplicada
 es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
 \begin{tcolorbox}[breakable]
     Tenemos la siguiente información:
     \begin{align*}
         \bm{a} &= 2cos(wt) \bm{i} \\
-        \bm{v} &= \left(\frac{2}{w}sin(wt) + v_0 \right)\bm{i} \\ 
-        \bm{x} &= \left(-\frac{2}{w^2}cos(wt) + v_0t + \frac{2}{w^2} + x_0 \right) \bm{i}
+        \bm{v} &= \left(\frac{2}{w}sin(wt) + v(0) \right)\bm{i} \\ 
+        \bm{x} &= \left(-\frac{2}{w^2}cos(wt) + v(0)t + \frac{2}{w^2} + x(0) \right) \bm{i}
     \end{align*}
     donde 
-    \[x_0 = 8 \]
-    podemos encontrar el valor de $v_0$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b\bm{i}$
+    \[x(0) = 8 \]
+    podemos encontrar el valor de $v(0)$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b\bm{i}$
     , de donde obtenemos:
     \begin{align*}
-        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2w} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2w}}
+        v(0) &= -\frac{\frac{2}{w^2} + 8 + b}{\frac{\pi}{2w}}
     \end{align*}
 \end{tcolorbox}
 
 \section*{3.-}
-\subsection*{4.4)}
+\subsubsection*{4.4)}
 \begin{enumerate}[a)]
     \item Si la velocidad límite de caída de un hombre de $80kg$, con paracaídas, es 
     la misma que tendría al caer libremente $0.75m$; hallar el valor de esta velocidad 
@@ -84,11 +84,54 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
     velocidad? 
 \end{enumerate}
 \begin{tcolorbox}[breakable]
-    
+    \subsubsection*{Caida con paracaídas}
+    Sea $v$ la función de velocidad del hombre en caída libre con paracaídas, donde se elige 
+    un sistema de referencia tal que $x(0)=0, v(0) = 0$, de acuerdo al problema se 
+    satisface la ecuación diferencial:
+    \begin{align*}
+        v' &= g - kv 
+    \end{align*}
+    que tiene por solución:
+    \begin{align*}
+        v &= \frac{g}{k} - \frac{g}{k}e^{-kt}
+    \end{align*}
+    vemos que cuando $t \to \infty$ se cumple:
+    \begin{align*}
+        v_t = \frac{g}{k}
+    \end{align*}
+    \subsubsection*{a)}
+    La velocidad y posición en caída libre son:
+    \begin{align*}
+        v &= gt \\
+        x &= \frac{g}{2}t^2 
+    \end{align*}
+    el tiempo que transcurre cuando se recorre una distancia $x_0$ es:
+    \begin{align*}
+        t_0 
+        &= \sqrt{\frac{2}{g}x_0} 
+    \end{align*}
+    la velocidad que se alcanza es:
+    \begin{align*}
+        v_t 
+        &= \sqrt{2gx_t} = 3.83 \left[ \frac{m}{s^2} \right]
+    \end{align*}
+    despejando $k$ obtenemos:
+    \begin{align*}
+        k 
+        &= \frac{g}{v_t} = 2.55 [s^{-1}]
+    \end{align*}
+    \subsubsection*{b)}
+    La función que nos dice su velocidad para $t>5$ es:
+    \begin{align*}
+        v 
+        &= \frac{g}{k} - \frac{g}{k}e^{-k(t-5)} + 5g \\ 
+        v(10)
+        &= 52 \left[ \frac{m}{s^2} \right]
+    \end{align*}
 \end{tcolorbox}
 
 \section*{4.-}
-\subsection*{4.7)}
+\subsubsection*{4.7)}
 Una partícula de masa $m$ tiene aplicada una fuerza $F=-kx^2$. Si $\dot{x} = v_0$ 
 cuando $x=0$, hállese:
 \begin{enumerate}[a)]
@@ -97,8 +140,8 @@ cuando $x=0$, hállese:
     \item la velocidad en cualquier posición
 \end{enumerate} 
 \begin{tcolorbox}[breakable]
-    \subsection*{a)}
-    Encontramos una energía potencial que satisface $U_0 = 0$ usando la relación:
+    \subsubsection*{a)}
+    Encontramos una energía potencial que satisface $U(0) = 0$ usando la relación:
     \begin{align*}
         U(x)
         &= -\int_0^x F(x')dx' \\
@@ -106,23 +149,24 @@ cuando $x=0$, hállese:
     \end{align*}
     por el teorema del trabajo y la energía se tiene la relación:
     \begin{align*}
-        U + K &= U_0 + K_0 \\
+        U + K &= U(0) + K(0) \\
         \frac{k}{3}x^3 + \frac{1}{2}m\dot{x}^2 &= \frac{1}{2}mv_0^2 = E
     \end{align*}
-    \subsection*{b)}
-    En el punto de retorno se satisface $U = E \implies \dot{x} = 0$, despejando obtenemos:
+    \subsubsection*{b)}
+    En el punto de retorno se satisface $U = E \implies \dot{x} = 0$, 
+    despejando $x$ de la ecuación de energía obtenemos:
     \begin{align*}
         x &= \left(\frac{3m}{2k}v_0^2\right)^{\frac{1}{3}}
     \end{align*} 
-    \subsection*{c)}
-    Despejando $\dot{x}$ obtenemos:
+    \subsubsection*{c)}
+    Despejando $\dot{x}$ de la ecuación de energía obtenemos:
     \begin{align*}
         \dot{x} &= \sqrt{v_0^2 - \frac{2k}{3m}x^3}
     \end{align*} 
 \end{tcolorbox}
 
 \section*{5.-}
-\subsection*{3.3)}
+\subsubsection*{3.3)}
 Un semicilindro se balance sinusoidalmente sin deslizamiento, como se muestra en la figura 
 $3-11$, de tal forma que $\theta = sin2t$. 
 \begin{enumerate}[a)]
@@ -133,7 +177,7 @@ $3-11$, de tal forma que $\theta = sin2t$.
 \end{enumerate}
 
 \begin{tcolorbox}[breakable]
-    \subsection*{Caso general}
+    \subsubsection*{Caso general}
     Definimos dos sistemas como en la imagen:
     \begin{figure}[H]
         \centering 
@@ -162,12 +206,12 @@ $3-11$, de tal forma que $\theta = sin2t$.
         &= \ddot{\theta}(t_0)\bm{i} - \ddot{\theta}(t_0)\bm{i} + \dot{\theta^2}(t_0)\bm{j} \\
         &= 4cos^2(2t_0)\bm{j} \left[ \frac{m}{s^2} \right]
     \end{align*}
-    \subsection*{a)}
+    \subsubsection*{a)}
     En este caso $t_0 = 0[s]$, sustituyendo obtenemos:
     \begin{align*}
         \bm{a} &= 4\bm{j} \left[ \frac{m}{s^2} \right]
     \end{align*}
-    \subsection*{b)}
+    \subsubsection*{b)}
     En este caso tenemos $t_0 = \frac{\pi}{4}[s]$, sustituyendo obtenemos:
     \begin{align*}
         \bm{a} &= \bm{0} \left[ \frac{m}{s^2} \right]
