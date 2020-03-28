@@ -32,11 +32,24 @@ constante $\Omega$. si el niño está a una distancia $c$ del eje de rotación,
 hallése una expresión de su aceleración relativa al suelo en funcion de $\Omega, c, h_0, w$ 
 y $t$. 
 \begin{tcolorbox}[breakable]
-    Sea $\bm{x}$ la función que regresa la posición para un tiempo $t$, se tiene:
+    Definimos dos sistemas, $S$ en resposo en el centro del juego y $S'$ justo debajo del 
+    caballito como en la figura:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[]{p1_horse.png}
+    \end{figure}
+    definimos los vectores:
     \begin{align*}
-        \bm{x} &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
+        \bm{e_r} &= cos(\Omega t) \bm{i} + sin(\Omega t) \bm{j} \\ 
+        \bm{e_\theta} &= sin(\Omega t)\bm{i} - cos(\Omega t) \bm{j}
+    \end{align*}
+    Sea $\bm{r}$ la función de posición en el sistema $S$, se tiene:
+    \begin{align*}
+        \bm{r} 
+        &= \bm{R'} + \bm{r'} \\
+        &= c\bm{e_r} + h_0sin(wt)\bm{k} \\
         \bm{v} &= -c\Omega\bm{e_\theta} + h_0wcos(wt)\bm{k} \\
-        \bm{a} &= -c\Omega^2\bm{e_r} - h_0w^2sin(wt)\bm{k} 
+        \bm{a} &= -c\Omega^2\bm{e_r} - h_0w^2sin(wt)\bm{k} \\
     \end{align*}
 \end{tcolorbox}
 
@@ -56,7 +69,7 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
     podemos encontrar el valor de $v_0$ mediante la relación $\bm{x}(\frac{\pi}{2w}) = -b\bm{i}$
     , de donde obtenemos:
     \begin{align*}
-        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2w}}
+        v_0 &= \frac{\frac{2}{w^2}cos\frac{\pi}{2w} - \frac{2}{w^2} - x_0 - b}{\frac{\pi}{2w}}
     \end{align*}
 \end{tcolorbox}
 
@@ -118,7 +131,46 @@ $3-11$, de tal forma que $\theta = sin2t$.
     \item Cuando el semicilindro está al ángulo máximo de 1 radían ¿cuál es la aceleración 
     del punto de contacto con la superficie fija?
 \end{enumerate}
+
 \begin{tcolorbox}[breakable]
-    
+    \subsection*{Caso general}
+    Definimos dos sistemas como en la imagen:
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[trim=30 30 30 30, clip]{p5_cylinder.png}
+    \end{figure}
+    Sea $\bm{r}$ la función de posición usando $S$ para el punto que se hace de contacto al tiempo $t_0$,
+    como se balancea sin deslizamiento:
+    \begin{align*}
+        \bm{R} &= \theta \bm{i} \\
+        \bm{r'} &= sin(\theta_0-\theta)\bm{i} - cos(\theta_0-\theta)\bm{j}
+    \end{align*}
+    El movimiento respecto al sistema en reposo $S$, está dado por:
+    \begin{align*}
+        \bm{r} &= \bm{R} + \bm{r'} \\
+        \bm{v} &=\dot{\theta}\bm{i} 
+        - \dot{\theta}cos(\theta_0-\theta)\bm{i} 
+        - \dot{\theta}sin(\theta_0-\theta)\bm{j} \\ 
+        \bm{a} 
+        &=\ddot{\theta}\bm{i} 
+        -(\ddot{\theta}cos(\theta_0-\theta) + \dot{\theta}^2sin(\theta_0-\theta))\bm{i} 
+        -(\ddot{\theta}sin(\theta-\theta_0) - \dot{\theta}^2cos(\theta_0-\theta))\bm{j}  
+    \end{align*}
+    La aceleración de este punto cuando se hace de contacto es:
+    \begin{align*}
+        \bm{a}(t_0) 
+        &= \ddot{\theta}(t_0)\bm{i} - \ddot{\theta}(t_0)\bm{i} + \dot{\theta^2}(t_0)\bm{j} \\
+        &= 4cos(2t_0)\bm{j} \left[ \frac{m}{s^2} \right]
+    \end{align*}
+    \subsection*{a)}
+    En este caso $t_0 = 0[s]$, sustituyendo obtenemos:
+    \begin{align*}
+        \bm{a} &= 4\bm{j} \left[ \frac{m}{s^2} \right]
+    \end{align*}
+    \subsection*{b)}
+    En este caso tenemos $t_0 = \frac{\pi}{4}[s]$, sustituyendo obtenemos:
+    \begin{align*}
+        \bm{a} &= \bm{0} \left[ \frac{m}{s^2} \right]
+    \end{align*}
 \end{tcolorbox}
 \end{document}
