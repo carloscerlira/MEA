@@ -103,23 +103,29 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     aplicado a $\theta$ se tiene:
     \begin{align*}
         \frac{\partial L}{\partial \phi} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\phi}} &= 0 \\ 
-        0 - \frac{d}{dt}mr^2\dot{\phi} &= 0
+        0 - \frac{d}{dt}m\rho^2\dot{\phi} &= 0
     \end{align*}
-    aplicado a $r$ se tiene:
+    aplicado a $\rho$ se tiene:
     \begin{align*}
         \frac{\partial L}{\partial \rho} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\rho}} &= 0 \\ 
-        mr\dot{\phi^2} - mgcot\alpha - m\ddot{\rho}csc^2\alpha &= 0 \\ 
+        m\rho\dot{\phi^2} - mgcot\alpha - m\ddot{\rho}csc^2\alpha &= 0 \\ 
     \end{align*}
     \subsubsection*{b)}
     Veremos que una orbita de la forma:
     \begin{align*}
         \rho &= \rho_0 \\
-        \phi &= vt
+        \phi &= w_0t
     \end{align*}
     son solucion a las ecuaciones de Lagrange, de la ultima ecuación obtenemos la restricción:
     \begin{align*}
         m\rho_0\dot{\phi}^2 &= mgcot\alpha \\
-        v^2 &= \frac{gcot\alpha}{\rho} 
+        w_0^2 &= \frac{gcot\alpha}{\rho_0} 
+    \end{align*}
+    la velocidad de la particula es en esta orbita es: 
+    \begin{align*}
+        v^2 = \rho_0^2w_0^2 
+        &= \rho_0gcot\alpha \\ 
+        &= gz
     \end{align*}
 \end{tcolorbox}
 
