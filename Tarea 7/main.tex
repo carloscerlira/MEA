@@ -60,7 +60,7 @@ El movmiento del péndulo es en un plano vertical.
 \subsection*{5.9)}
 Una partícula de masa $m$ se desliza, bajo la acción de la gravedad, en la superficie interior
 lisa del cono invertido de la figura $5-11$ cuya ecuación es:
-\[ \rho = zth\alpha \]
+\[ \rho = ztan\alpha \]
 \begin{enumerate}[a)]
     \item Establecer las ecuaciones de movimiento de Lagrange para la partícula.
     \item Demostrar que son posibles órbitas circulares, y hallar la velocidad de la 
@@ -74,21 +74,21 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     \subsubsection*{a)}
     Describimos el moviminto utilizando las coordenadas generalizadas $\rho,\phi$ donde:
     \begin{align*}
-        x = rcos\phi \\
-        y = rsin\phi \\
-        z = rcot\alpha
+        x = \rho cos\phi \\
+        y = \rho sin\phi \\
+        z = \rho cot\alpha
     \end{align*}
     derivando obtenemos:
     \begin{align*}
-        \dot{x} &= \dot{r}cos\phi - rsin\phi \dot{\phi} \\
-        \dot{y} &= \dot{r}sin\phi + rcos\phi \dot{\phi} \\
-        \dot{z} &= \dot{r}cot\alpha
+        \dot{x} &= \dot{\rho}cos\phi - \rho sin\phi \dot{\phi} \\
+        \dot{y} &= \dot{\rho}sin\phi + \rho cos\phi \dot{\phi} \\
+        \dot{z} &= \dot{\rho}cot\alpha
     \end{align*}
     elevando al cuadrado encontramos la energía cinética:
     \begin{align*}
         T 
         &= \frac{1}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) \\
-        &= \frac{1}{2}m\dot{r}^2csc^2\alpha + \frac{1}{2}mr^2\dot{\phi}^2
+        &= \frac{1}{2}m\dot{\rho}^2csc^2\alpha + \frac{1}{2}m\rho^2\dot{\phi}^2
     \end{align*}
     la fuerza es de la forma:
     \begin{align*} 
@@ -97,7 +97,7 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     \end{align*}
     obtenemos las ecuaciones de movimiento recordando:
     \begin{align*}
-        \frac{\partial L}{\partial x_1} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} + \lambda \frac{\partial f}{\partial q_i} &= 0 
+        \frac{\partial L}{\partial q_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} &= 0 
     \end{align*}
     aplicado a $\theta$ se tiene:
     \begin{align*}
@@ -106,19 +106,19 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     \end{align*}
     aplicado a $r$ se tiene:
     \begin{align*}
-        \frac{\partial L}{\partial r} - \frac{d}{dt}\frac{\partial L}{\partial \dot{r}} &= 0 \\ 
-        mr\dot{\phi^2} - mgcot\alpha - m\ddot{r}csc^2\alpha &= 0 \\ 
+        \frac{\partial L}{\partial \rho} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\rho}} &= 0 \\ 
+        mr\dot{\phi^2} - mgcot\alpha - m\ddot{\rho}csc^2\alpha &= 0 \\ 
     \end{align*}
     \subsubsection*{b)}
     Veremos que una orbita de la forma:
     \begin{align*}
-        r &= r_0 \\
+        \rho &= \rho_0 \\
         \phi &= vt
     \end{align*}
     son solucion a las ecuaciones de Lagrange, de la ultima ecuación obtenemos la restricción:
     \begin{align*}
-        mr_0\dot{\phi}^2 &= mgcot\alpha \\
-        v^2 &= \frac{gcot\alpha}{r} 
+        m\rho_0\dot{\phi}^2 &= mgcot\alpha \\
+        v^2 &= \frac{gcot\alpha}{\rho} 
     \end{align*}
 \end{tcolorbox}
 
