@@ -1,0 +1,189 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 15cm
+\topmargin = -2.5cm 
+\oddsidemargin = 1.5cm
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\usepackage{amsmath}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{adjustbox}
+\usepackage{bm} 
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\title{Tarea 6 Mecánica Analítica}
+\author{Cerritos Lira Carlos}
+\date{28 de Marzo del 2020}
+
+\begin{document}
+\maketitle
+\section*{Problemas}
+\section*{1.-}
+\subsection*{5.2)}
+Utilizar el resultado del problema 5-1 para hallar las ecuaciones de
+Lagrange de una partícula cuya energía cinética es:
+\[ T = \frac{1}{2}a\dot{q}_1^2+\frac{1}{2}b\dot{q}_2^2 \]
+y cuya energía cinética es:
+\[ U = \frac{1}{2}k_1(q_1+q_2)^2+\frac{1}{2}k_2(q_1-q_2)^2 \]
+\begin{tcolorbox}[breakable]
+\end{tcolorbox}
+
+\section*{2.-}
+\subsection*{5.3)}
+El putno de soporte de un péndulo simple de logntiud $l$ y masa $m$ se mueve sobre 
+una recta vertical de acuerdo con la ecuación:
+\[y= y(t)\]
+El movmiento del péndulo es en un plano vertical.
+\begin{enumerate}[a)]
+    \item Establecer las componentes de las ecuaciones de movimeinto de Newton 
+    para la partícula en las direcciones $\vec{e_1}$ y $\vec{e_2}$ mostradas en
+    la figura $5-7$(Sugerencia: considérese el movimiento con respecto a un sistema
+    de coordenadas cuya aceleración es $A=\ddot{y}$)
+    \item Demostrar que la energía cinética de la partícula está dada por:
+    \[ T = \frac{1}{2}m(l\dot{\theta})^2 + \frac{1}{2}m\dot{y}^2 + ml\dot{\theta}\dot{y}sin\theta \]
+    \item Dado que la energía potencial escalar es:
+    \[ U = mgy - mglcos\theta \]
+    demostrar que las ecuaciones de Lagrange deducidas de la energía cinética de la 
+    parte b) y esta función de la energía potencial para la variable $\theta$
+    (ver problema $5-1$) son equivalentes a la ecuación de Newton a lo largo de $\vec{e_2}$
+\end{enumerate}
+\begin{tcolorbox}[breakable]
+\end{tcolorbox}
+
+\section*{3.-}
+\subsection*{5.9)}
+Una partícula de masa $m$ se desliza, bajo la acción de la gravedad, en la superficie interior
+lisa del cono invertido de la figura $5-11$ cuya ecuación es:
+\[ \rho = zth\alpha \]
+\begin{enumerate}[a)]
+    \item Establecer las ecuaciones de movimiento de Lagrange para la partícula.
+    \item Demostrar que son posibles órbitas circulares, y hallar la velocidad de la 
+    partícula en una órbita de este tipo.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{p3_cone.png}
+\end{figure}
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Describimos el moviminto utilizando las coordenadas generalizadas $\rho,\phi$ donde:
+    \begin{align*}
+        x = rcos\phi \\
+        y = rsin\phi \\
+        z = rcot\alpha
+    \end{align*}
+    derivando obtenemos:
+    \begin{align*}
+        \dot{x} &= \dot{r}cos\phi - rsin\phi \dot{\phi} \\
+        \dot{y} &= \dot{r}sin\phi + rcos\phi \dot{\phi} \\
+        \dot{z} &= \dot{r}cot\alpha
+    \end{align*}
+    elevando al cuadrado encontramos la energía cinética:
+    \begin{align*}
+        T 
+        &= \frac{1}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) \\
+        &= \frac{1}{2}m\dot{r}^2csc^2\alpha + \frac{1}{2}mr^2\dot{\phi}^2
+    \end{align*}
+    la fuerza es de la forma:
+    \begin{align*} 
+        U 
+        &= mgrcot\alpha
+    \end{align*}
+    obtenemos las ecuaciones de movimiento recordando:
+    \begin{align*}
+        \frac{\partial L}{\partial x_1} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} + \lambda \frac{\partial f}{\partial q_i} &= 0 
+    \end{align*}
+    aplicado a $\theta$ se tiene:
+    \begin{align*}
+        \frac{\partial L}{\partial \phi} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\phi}} &= 0 \\ 
+        0 - \frac{d}{dt}mr^2\dot{\phi} &= 0
+    \end{align*}
+    aplicado a $r$ se tiene:
+    \begin{align*}
+        \frac{\partial L}{\partial r} - \frac{d}{dt}\frac{\partial L}{\partial \dot{r}} &= 0 \\ 
+        mr\dot{\phi^2} - mgcot\alpha - m\ddot{r}csc^2\alpha &= 0 \\ 
+    \end{align*}
+    \subsubsection*{b)}
+    Veremos que una orbita de la forma:
+    \begin{align*}
+        r &= r_0 \\
+        \phi &= vt
+    \end{align*}
+    son solucion a las ecuaciones de Lagrange, de la ultima ecuación obtenemos la restricción:
+    \begin{align*}
+        mr_0\dot{\phi}^2 &= mgcot\alpha \\
+        v^2 &= \frac{gcot\alpha}{r} 
+    \end{align*}
+\end{tcolorbox}
+
+\section*{4.-}
+\subsection*{5.10}
+Considerando el sistema de partículas mostrado en la figura $5-12$:
+\begin{enumerate}[a)]
+    \item Escribir las ecuaciones de movimiento de Newton para cada una de las partículas, 
+    en función de las variables de desplazamiento, a partir del punto de equilibrio, $x_1$ y $x_2$.
+    \item Demostrar que para cualesqueira desplazamientos arbitrarios de las dos partículas, 
+    la energía potencial acumulada en los resortes está dada por:
+    \[ U = \frac{1}{2}k_1x_1^2+\frac{1}{2}k_2(x_2-x_1)^2 + \frac{1}{2}k_3x_2^2 \]
+    \item Empleando la expresión 
+    \[ T = \frac{1}{2}m_1\dot{x}_1^2+ \frac{1}{2}m_2\dot{x}_2^2 \]
+    para la enrgía cinética, demostrar que las ecuaciones de Lagrange así obtenidas para 
+    las variables $x_1$ y $x_2$, a partir de esta $T$ y la $U$ de la parte $b)$, concuerdan 
+    con las ecuaciones de Newton halladas en la parte $a)$. ¿Cuáles supone usted que son 
+    las ecuaciones de Lagrange para un sistema de partículas?    
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{p4_springs.png}
+\end{figure}
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Para escribir las ecuaciones de movimiento de Newton solo hace falta notar que 
+    $(x_2-x_1)$ es la longitud del resorte con constante $k_2$:
+    \begin{align*}
+        m\ddot{x_1} &= -k_1x_1 + k_2(x_2-x_1) \\
+        m\ddot{x_2} &= -k_3x_2 - k_2(x_2-x_1)
+    \end{align*}
+    \subsubsection*{b)}
+    Obtenemos $U$ mediante la relación:
+    \begin{align*}
+        \bm{F}_i &= -\frac{d}{dx_i}U
+    \end{align*}
+    para que se cumpla en $x_1$ se debe de tener $U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2$, para 
+    que se cumpla para $x_2$ se debe de tener $U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2-\frac{1}{2}k_3x_2^2$.
+    \subsubsection*{c)}
+    Las ecuaciones de movimiento de Lagrange están dadas por:
+    \begin{align*}
+        \frac{\partial L}{\partial q_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} &= 0 
+    \end{align*}
+    sustituyendo para $x_1$:
+    \begin{align*}
+        \frac{\partial L}{\partial x_1} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_1} &= 0 \\
+        -k_1x_1+k_2(x_2-x_1) - m_1\ddot{x_1} &= 0  
+    \end{align*}
+    sustituyendo para $x_2$:
+    \begin{align*}
+        \frac{\partial L}{\partial x_2} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_2} &= 0 \\
+        k_2(x_2-x_1)-k_2x_3 - m\ddot{x}_2 &= 0 
+    \end{align*}
+    donde podemos observar que las relaciones son las mismas obtenidas en la parte $a)$. \\
+    Para describir el movimiento de un sistema de $n$ partículas en $R^k$ necesitaremos $n*k$, 
+    coordenadas generalizadas, donde se satisface:
+    \begin{align*}
+        \frac{\partial L}{\partial x_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_i} &= 0 \\
+    \end{align*}
+    La energía potencial se va definir de tal forma que:
+    \begin{align*}
+        \bm{F_i} &= \nabla_i U \\
+        \nabla_i &= \left( \frac{\partial }{\partial x_i}, \frac{\partial }{\partial x_{i+1}}, \frac{\partial }{\partial x_{i+2}} \right)
+    \end{align*}
+    
+\end{tcolorbox}
+
+\end{document}

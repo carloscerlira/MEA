@@ -86,14 +86,14 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
 \begin{tcolorbox}[breakable]
     \subsubsection*{Caida con paracaídas}
     Sea $v$ la función de velocidad del hombre en caída libre con paracaídas, donde se elige 
-    un sistema de referencia tal que $x(0)=0, v(0) = 0$, de acuerdo al problema se 
+    un sistema de referencia tal que $x(0)=0, v(t_0) = v_0$, de acuerdo al problema se 
     satisface la ecuación diferencial:
     \begin{align*}
         v' &= g - kv 
     \end{align*}
     que tiene por solución:
     \begin{align*}
-        v &= \frac{g}{k} - \frac{g}{k}e^{-kt}
+        v &= \frac{g}{k} + \left(v_0 - \frac{g}{k}\right)e^{-kt}
     \end{align*}
     vemos que cuando $t \to \infty$ se cumple:
     \begin{align*}
@@ -113,20 +113,20 @@ es $F=2mcos(wt)$ y $x=8$ a $t=0$ y $x=-b$ a $t=\frac{\pi}{2w}$.
     la velocidad que se alcanza es:
     \begin{align*}
         v_t 
-        &= \sqrt{2gx_t} = 3.83 \left[ \frac{m}{s^2} \right]
+        &= \sqrt{2gx_t} = 3.836 \left[ \frac{m}{s^2} \right]
     \end{align*}
     despejando $k$ obtenemos:
     \begin{align*}
         k 
-        &= \frac{g}{v_t} = 2.55 [s^{-1}]
+        &= \frac{g}{v_t} = 2.557 [s^{-1}]
     \end{align*}
     \subsubsection*{b)}
-    La función que nos dice su velocidad para $t>5$ es:
+    La velocidad para $t>5$ esta dada por:
     \begin{align*}
         v 
-        &= \frac{g}{k} - \frac{g}{k}e^{-k(t-5)} + 5g \\ 
+        &= \frac{g}{k} + \left( 5g - \frac{g}{k} \right)e^{-k(t-5)}  \\ 
         v(10)
-        &= 52 \left[ \frac{m}{s^2} \right]
+        &= 3.847 \left[ \frac{m}{s^2} \right]
     \end{align*}
 \end{tcolorbox}
 
