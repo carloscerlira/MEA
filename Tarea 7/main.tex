@@ -17,9 +17,9 @@
 
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
-\title{Tarea 6 Mecánica Analítica}
+\title{Tarea 7 Mecánica Analítica}
 \author{Cerritos Lira Carlos}
-\date{28 de Marzo del 2020}
+\date{21 de Abril del 2020}
 
 \begin{document}
 \maketitle
@@ -73,16 +73,6 @@ El movmiento del péndulo es en un plano vertical.
 \end{figure}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    Escojemos un sistema tal que vea al péndulo fijo en el eje vertical, consideremos los vectores base:
-    \begin{align*}
-        \bm{e}_1 &= l(sin\theta,-cos\theta) \\ 
-        \bm{e}_2 &= l(cos\theta, sin\theta) \\ 
-        \bm{F} &= (0,-mg+\ddot{y})
-    \end{align*}
-    donde se puede ver:
-    \begin{align*}
-        \bm{F} \cdot \bm{e}_1 &= lmgcos\theta -\ddot{y}cos\theta
-    \end{align*}
     \subsubsection*{b)}
     Utilizaremos la coordenada generalizada $\theta$ para describir el movimiento, donde:
     \begin{align*}
@@ -162,7 +152,7 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     aplicado a $\rho$ se tiene:
     \begin{align*}
         \frac{\partial L}{\partial \rho} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\rho}} &= 0 \\ 
-        m\rho\dot{\phi^2} - mgcot\alpha - m\ddot{\rho}csc^2\alpha &= 0 \\ 
+        m\rho\dot{\phi^2} - mgcot\alpha - m\ddot{\rho}csc^2\alpha &= 0 
     \end{align*}
     \subsubsection*{b)}
     Veremos que una orbita de la forma:
@@ -217,8 +207,10 @@ Considerando el sistema de partículas mostrado en la figura $5-12$:
     \begin{align*}
         \bm{F}_i &= -\frac{d}{dx_i}U
     \end{align*}
-    para que se cumpla en $x_1$ se debe de tener $U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2$, para 
-    que se cumpla para $x_2$ se debe de tener $U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2-\frac{1}{2}k_3x_2^2$.
+    para que se cumpla en $x_1$ se debe de tener 
+    \[U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2\]
+    para  que se cumpla para $x_2$ se debe de tener 
+    \[U = -\frac{1}{2}kx_1^2+\frac{1}{2}k_2(x_2-x_1)^2-\frac{1}{2}k_3x_2^2 \]
     \subsubsection*{c)}
     Las ecuaciones de movimiento de Lagrange están dadas por:
     \begin{align*}
