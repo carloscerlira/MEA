@@ -227,7 +227,7 @@ Considerando el sistema de partículas mostrado en la figura $5-12$:
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
     Para escribir las ecuaciones de movimiento de Newton solo hace falta notar que 
-    $(x_2-x_1)$ es la distancia que se a comprimido el resorte con constante $k_2$:
+    $(x_2-x_1)$ es la longitud que se a comprimido el resorte con constante $k_2$:
     \begin{align*}
         m\ddot{x_1} &= -k_1x_1 + k_2(x_2-x_1) \\
         m\ddot{x_2} &= -k_3x_2 - k_2(x_2-x_1)
@@ -257,7 +257,7 @@ Considerando el sistema de partículas mostrado en la figura $5-12$:
         k_2(x_2-x_1)-k_2x_3 - m\ddot{x}_2 &= 0 
     \end{align*}
     donde podemos observar que las relaciones son las mismas obtenidas en la parte $a)$. \\
-    Para describir el movimiento de un sistema de $n$ partículas en $R^k$ necesitaremos $n \cdot k$, 
+    Para describir el movimiento de un sistema de $n$ partículas en $R^k$ necesitaremos $n \cdot k$,
     coordenadas generalizadas, donde se satisface:
     \begin{align*}
         \frac{\partial L}{\partial x_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_i} &= 0 
@@ -265,7 +265,7 @@ Considerando el sistema de partículas mostrado en la figura $5-12$:
     La energía potencial se va definir de tal forma que:
     \begin{align*}
         \bm{F_i} &= \nabla_i U \\
-        \nabla_i &= \left( \frac{\partial }{\partial x_i}, \frac{\partial }{\partial x_{i+1}}, \frac{\partial }{\partial x_{i+2}} \right)
+        \nabla_i &= \left( \frac{\partial }{\partial x_i}, \frac{\partial }{\partial x_{i+1}}, ...., \frac{\partial }{\partial x_{i+k}} \right) \quad i=0;n \cdot k;k
     \end{align*}
     
 \end{tcolorbox}
