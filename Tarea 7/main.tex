@@ -32,6 +32,20 @@ Lagrange de una partícula cuya energía cinética es:
 y cuya energía cinética es:
 \[ U = \frac{1}{2}k_1(q_1+q_2)^2+\frac{1}{2}k_2(q_1-q_2)^2 \]
 \begin{tcolorbox}[breakable]
+    De acuerdo a las ecuaciones de Lagrange:
+    \begin{align*}
+        \frac{\partial L}{\partial q_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} &= 0 
+    \end{align*}
+    Hacemos cuentas para $q_1$:
+    \begin{align*}
+        \frac{\partial L}{\partial q_1} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_1} &= 0 \\
+        -k_1(q_1+q_2) - k_2(q_1-q_2) - a\ddot{q_1} &= 0 
+    \end{align*}
+    Hacemos cuentas para $q_2$:
+    \begin{align*}
+        \frac{\partial L}{\partial q_1} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_1} &= 0 \\
+        -k_1(q_1+q_2) + k_2(q_1-q_2) - b\ddot{q_2} &= 0  
+    \end{align*}
 \end{tcolorbox}
 
 \section*{2.-}
@@ -53,7 +67,47 @@ El movmiento del péndulo es en un plano vertical.
     parte b) y esta función de la energía potencial para la variable $\theta$
     (ver problema $5-1$) son equivalentes a la ecuación de Newton a lo largo de $\vec{e_2}$
 \end{enumerate}
+\begin{figure}[H]
+    \centering 
+    \includegraphics[scale=0.8]{p1_pendulum.png}
+\end{figure}
 \begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Escojemos un sistema tal que vea al péndulo fijo en el eje vertical, consideremos los vectores base:
+    \begin{align*}
+        \bm{e}_1 &= l(sin\theta,-cos\theta) \\ 
+        \bm{e}_2 &= l(cos\theta, sin\theta) \\ 
+        \bm{F} &= (0,-mg+\ddot{y})
+    \end{align*}
+    donde se puede ver:
+    \begin{align*}
+        \bm{F} \cdot \bm{e}_1 &= lmgcos\theta -\ddot{y}cos\theta
+    \end{align*}
+    \subsubsection*{b)}
+    Utilizaremos la coordenada generalizada $\theta$ para describir el movimiento, donde:
+    \begin{align*}
+        x &= lsin\theta \\ 
+        y &= -lcos\theta + y
+    \end{align*}
+    derivando obtenemos:
+    \begin{align*}
+        \dot{x} &= l\dot{\theta}cos\theta \\
+        \dot{y} &= l\dot{\theta}sin\theta + \dot{y}
+    \end{align*}
+    podemos encontrar la energía cinética en función de $\theta$:
+    \begin{align*}
+        T 
+        &= \frac{1}{2}m(\dot{x}^2+\dot{y}^2) \\
+        &= \frac{1}{2}m(l^2\dot{\theta}^2 + 2l\dot{\theta}\dot{y}sin\theta + \dot{y}^2) \\
+        &=  \frac{1}{2}m(l\dot{\theta})^2 + \frac{1}{2}m\dot{y}^2 + ml\dot{\theta}\dot{y}sin\theta
+    \end{align*}
+    \subsubsection*{c)}
+    Partimos de la relación:
+    \begin{align*}
+        \frac{\partial L}{\partial \theta} - \frac{d}{dt}\frac{\partial L }{\partial \dot{\theta}} &= 0 \\
+        (ml\dot{\theta}\dot{y}cos\theta - mglsin\theta) -(ml^2\dot{\theta} + ml\ddot{y}sin\theta + ml\dot{\theta}\dot{y}cos\theta)  &= 0 \\
+        -mgsin\theta - m\ddot{y}sin\theta &= ml\ddot{\theta}
+    \end{align*}
 \end{tcolorbox}
 
 \section*{3.-}
@@ -87,7 +141,7 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     elevando al cuadrado encontramos la energía cinética:
     \begin{align*}
         T 
-        &= \frac{1}{2}(\dot{x}^2+\dot{y}^2+\dot{z}^2) \\
+        &= \frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2) \\
         &= \frac{1}{2}m\dot{\rho}^2csc^2\alpha + \frac{1}{2}m\rho^2\dot{\phi}^2
     \end{align*}
     la energía potencial es de la forma:
@@ -100,7 +154,7 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     \begin{align*}
         \frac{\partial L}{\partial q_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{q}_i} &= 0 
     \end{align*}
-    aplicado a $\theta$ se tiene:
+    aplicado a $\phi$ se tiene:
     \begin{align*}
         \frac{\partial L}{\partial \phi} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\phi}} &= 0 \\ 
         0 - \frac{d}{dt}m\rho^2\dot{\phi} &= 0
@@ -123,7 +177,8 @@ lisa del cono invertido de la figura $5-11$ cuya ecuación es:
     \end{align*}
     la velocidad de la particula es en esta orbita es: 
     \begin{align*}
-        v^2 = \rho_0^2w_0^2 
+        v^2 
+        &= \rho_0^2w_0^2 \\
         &= \rho_0gcot\alpha \\ 
         &= gz
     \end{align*}
@@ -183,7 +238,7 @@ Considerando el sistema de partículas mostrado en la figura $5-12$:
     Para describir el movimiento de un sistema de $n$ partículas en $R^k$ necesitaremos $n \cdot k$, 
     coordenadas generalizadas, donde se satisface:
     \begin{align*}
-        \frac{\partial L}{\partial x_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_i} &= 0 \\
+        \frac{\partial L}{\partial x_i} - \frac{d}{dt}\frac{\partial L }{\partial \dot{x}_i} &= 0 
     \end{align*}
     La energía potencial se va definir de tal forma que:
     \begin{align*}
