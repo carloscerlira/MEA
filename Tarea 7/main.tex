@@ -73,6 +73,36 @@ El movmiento del péndulo es en un plano vertical.
 \end{figure}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
+    Definimos los vectores:
+    \begin{align*}
+        \bm{e}_1 &= sin\theta \bm{i} - cos\theta \bm{j} \\ 
+        \bm{e}_2 &= cos\theta \bm{i} + sin\theta \bm{j}
+    \end{align*}
+    describimos el movimiento con ayuda de estos vectores:
+    \begin{align*}
+        \bm{x} &= l\bm{e}_1 + y\bm{j} \\
+        \bm{v} &= l\dot{\theta}\bm{e}_2 + \dot{y}\bm{j} \\
+        \bm{a} &= l\ddot{\theta}\bm{e}_2 - l\dot{\theta}^2\bm{e_1} + \ddot{y}\bm{j}
+    \end{align*}
+    de donde obtenemos:
+    \begin{align*}
+        \bm{F} \cdot \bm{e}_1 &= -ml\dot{\theta}^2 - m\ddot{y} cos\theta \\
+        \bm{F} \cdot \bm{e}_2 &= ml\ddot{\theta} + m\ddot{y}sin\theta
+    \end{align*}
+    por otra parte, haciendo un análisis de fuerzas también encontramos:
+    \begin{align*}
+        \bm{F} &= mgcos\theta \bm{e_1} - R\bm{e_1} - mgsin\theta \bm{e_2}
+    \end{align*}
+    con $R$ la tracción o tensión de la cuerda, de donde encontramos nuevamente:
+    \begin{align*}
+        \bm{F} \cdot \bm{e}_1 &= mgcos\theta - R \\
+        \bm{F} \cdot \bm{e}_2 &= -mgsin\theta 
+    \end{align*}
+    de donde encontramos las ecuaciones de movimiento:
+    \begin{align*}
+        mgcos\theta + m\ddot{y}cos\theta - R &= -ml\dot{\theta}^2 \\
+        -mgsin\theta - m\ddot{y}sin\theta &= ml\ddot{\theta}
+    \end{align*}
     \subsubsection*{b)}
     Utilizaremos la coordenada generalizada $\theta$ para describir el movimiento, donde:
     \begin{align*}
