@@ -37,14 +37,15 @@ y se desvía en una trayectoria circular de $0.182m$ de radio. Determinar:
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    Encontramos la velocidad usando la energía potencial:
+    Despejamos $v^2$ de la ecuación del trabajo y la energía:
     \[ v^2 = \frac{2qV}{m} \]
-    encontramos la masa usando el movmiento circular que sigue una vez entra al campo magnético, donde:
+    encontramos la nuevamente la velocidad usando el movmiento circular que sigue una vez entra al campo magnético, donde:
     \[ v = \frac{rqB}{m} \]
     juntando ambas obtenemos:
     \[ v = \frac{2V}{rB} = 1.1 \times 10^5 m/seg\]
     \subsubsection*{b)}
-    \[ m = \frac{2qV}{v^2} = 2.65 \times 10^{-26}kg = 15.97uma\]
+    De la equación del trabajo y la energía despejamos $m$
+    \[ m = \frac{2qV}{v^2} = 2.64 \times 10^{-26}kg = 15.94 uma\]
     \subsubsection*{c)}
     \[ A = 15 \]
 \end{tcolorbox}
@@ -55,7 +56,47 @@ En la posición $x=0, y=0$, un cañón tiene un alcance máximo $l_m$. Determina
 ángulos de elevación para hacer blanco en el punto:
 \[ x = l_m/2, \quad y=l_m/4 \]
 \begin{tcolorbox}[breakable]
-    \[ \theta = 45, 75 \]
+    Usamos las coordenadas $x,y$, donde tomamos un sistema de referencia
+    tal que al incio ambas sean cero:
+    \begin{align*}
+        T &= \frac{m}{2}(\dot{x}^2+\dot{y}^2) \\
+        U &= mgy 
+    \end{align*}
+    usando Lagrange llegamos a las ecuaciones:
+    \begin{align*}
+        m\ddot{x} &= 0 \\
+        m\ddot{y} + mg &= 0
+    \end{align*}
+    de donde obtenemos:
+    \begin{align*}
+        x &= v_{0x}t \\
+        y &= -\frac{gt^2}{2}-v_{0yt}
+    \end{align*}
+    de la ecuación para $y$ despejamos el tiempo en función de $\theta$:
+    \[ t = \frac{2v_0sin\theta}{g} \]
+    la distancia recorrida para este tiempo es:
+    \begin{align*}
+        x 
+        &= v_{0x}t \\
+        &= v_0cos\theta \frac{2v_0sin\theta}{g} \\
+        &= \frac{2v_0^2}{g}sin\theta cos\theta
+    \end{align*}
+    de donde obtenemos el alcance máximo se obtiene cuando $\theta=\frac{\pi}{4}$, dando:
+    \[ l_m = \frac{v_0^2}{g} \]
+    veremos el tiempo que tarda el proyectil en alcanzar $l_m/2$
+    \[ t = \frac{l_m}{2v_0cos\theta} \]
+    para este tiempo queremos $y = \frac{l_m}{4}$, sustituyendo en la ecuación de movimiento:
+    \begin{align*}
+        \frac{l_m}{4} &= -\frac{g}{2}\frac{l_m^2}{4v_0^2cos^2\theta} + v_0sin\theta\frac{l_m}{2v_0cos\theta} \\
+        \frac{1}{4} &= -\frac{gl_m}{8v_0^2cos^2\theta} + \frac{tan\theta}{2} \\
+        \frac{1}{4} &= -\frac{1}{8}(1+tan^2\theta) + \frac{1}{2}tan\theta \\
+        0 &= tan^2\theta - 4tan\theta + 3
+    \end{align*}
+    cambiando nuestra variable por $x=tan\theta$, encontramos las soluciones:
+    \begin{align*}
+        &x_1 = 1, \quad x_2 = 3 \\
+        \theta_1 &= 45, \quad \theta_2 = 71.5
+    \end{align*}
 \end{tcolorbox}
 
 \section*{3.-}
@@ -148,7 +189,42 @@ reposo, las masas oscilan en el plano de la figura a un lado y al otro de la ver
 \subsection*{Demostración 8.15}
 \[ [x_i,l_j] = \sum_{k}e_{ijk}x_k \]
 \begin{tcolorbox}[breakable]
-    
+    Usaremos las propiedades:
+    \[ [x_i,x_j] = 0, \quad [x_i,p_j] = \delta_{ij}, \quad [a,b] = -[b,a] \]
+    para $i=1$ hacemos cálculos:
+    \begin{align*}
+        [x_1,l_1]
+        &= [x_1, x_2p_3-x_3p_2] \\
+        &= [x_1,x_2p_3] - [x_1,x_3p_2] \\
+        &= p_3[x_1,x_2] + x_2[x_1,p_3] - x_3[x_1,p_2] + p_2[x_1,x_3] \\
+        &= x_2[x_1,p_3] - x_3[x_1,p_2] \\ 
+        &= 0 \\
+        [x_1,l_2]
+        &= [x_1,x_3p_1-x_1p_3] \\
+        &= x_3[x_1,p_1] - x_1[x_1,p_3] \\
+        &= x_3 \\
+        [x_1,l_3] 
+        &= [x_1, x_1p_2-x_2p_1] \\
+        &= x_1[x_1,p_2]-x_2[x_1,p_1] \\
+        &= -x_2
+    \end{align*}
+    haciendo permutaciones ciclicas y cambiando signo cuando no se siga el orden correcto obtenemos:
+    \begin{align*}
+        [x_2,l_1]
+        &= -x_3 \\
+        [x_2,l_2] 
+        &= 0 \\
+        [x_2,l_3]
+        &= x_1 \\
+        [x_3,l_1] 
+        &= -x_2 \\
+        [x_3,l_2]
+        &= x_1 \\
+        [x_3,l_3]
+        &= 0
+    \end{align*}
+    donde se comprueba que en efecto:
+    \[ [x_i,l_j] = \sum_{k}e_{ijk}x_k \]
 \end{tcolorbox}
 
 \section*{5.-}
