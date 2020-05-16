@@ -57,7 +57,7 @@ paralelo al eje del condensador.
         &=(\dot{\rho} cos\phi - \rho \dot{\phi}sin\phi) \bm{i} 
         + (\dot{\rho}sin\phi + \rho \dot{\phi}cos\phi) \bm{j} 
         + \dot{z}\bm{k} \\
-        \dot{r}^2 &= \dot{\rho}^2 + \rho^2\dot{\phi}^2 + z^2 \\ 
+        \dot{r}^2 &= \dot{\rho}^2 + \rho^2\dot{\phi}^2 + \dot{z}^2 \\ 
         \bm{e}_\rho &= cos\phi \bm{i} + sin\phi \bm{j} 
     \end{align*}
     El campo eléctrico y magnético son de la forma:
@@ -146,7 +146,7 @@ cada pieza durante la explosión.
     \begin{align*}
         \bm{p}_i(t_2) - \bm{p}_i(t_1) &= \int_{t_1}^{t_2} F_i(t)dt \\
         \bm{p}_i &= F_i(t_2-t_1) \\
-        F_i &= p_i \cdot \times 10^5 \tfrac{m}{s^2}
+        F_i &= p_i \times 10^5 \tfrac{m}{s^2}
     \end{align*}
 \end{tcolorbox}
 
@@ -156,7 +156,7 @@ Un núcleo, originalmente en reposo, se desintegra por la emisión de un electr�
 cantidad de movimiento es $1.73 \frac{Mev}{C}$ y, perpendicularmente a la dirección del
 electrón, de un neutrino cuya cantidad de movimiento es $1.0\frac{Mev}{c}$. ¿En qué dirección y 
 sentido recaulará el núcleo?. ¿Cuál será su cantidad de movimiento en $\frac{Mev}{c}$. 
-Si la masa del núcleo restante es $3.90 \times 10^{-22}g$. Si la masa del núcleo restante es 
+$3.90 \times 10^{-22}g$. Si la masa del núcleo restante es 
 $3.9 \times 10^{-22}g$, ¿cuál será su energía cinética en electrón volts? 
 \begin{tcolorbox}[breakable]
     Usamos nuevamente la conservación del momento para un sistema de partículas donde $\bm{F}^{ext} = 0$, donde tenemos:
@@ -167,7 +167,15 @@ $3.9 \times 10^{-22}g$, ¿cuál será su energía cinética en electrón volts?
     \end{align*}
     por lo tanto:
     \[ p_3^2 = p_1^2 + p_2^2 \]
-    \[ T = \frac{1}{2}mv^2 = \frac{1}{2m}p_3^2 \]
+    \begin{align*}
+        T_3 
+        &= \frac{1}{2}m_3v^2 \\
+        &= \frac{1}{2m_3}p_3^2 \\
+        &= \frac{1}{2(3.9 \times 10^{-25})}(8.5 \times 10^{-31} + 2.84 \times 10^{-31}) \\
+        &= \frac{1.134 \times 10^{-30}}{7.8 \times 10^{-25}} \\
+        &= 1.45 \times 10^{-6}J \\
+        &= 9.10^6 MeV
+    \end{align*}
 \end{tcolorbox}
 
 \section*{4.-}
@@ -177,7 +185,39 @@ y otra partícula ligera de masa $M_2$ es expelida con una velocidad $V_2$ en á
 recto con la trayectoria de la primera, reculando el resto del núcleo (de masa $M_3$)
 con una velocidad $V_3$. Demuestre que la energía cinética de $M_2$ es:
 \[ T = \frac{M_3}{M_2+M_1} \left( Q + \frac{M_3-M_1}{M_3}T_1 \right) \]
+donde $Q$ es la energí liberada o desprendida en la reacción.
 \begin{tcolorbox}[breakable]
+    Usamos conservación del momento:
+    \begin{align*}
+        p_1 + p_3 = 0, \quad p_1 + p_2 = 0
+    \end{align*}
+    de donde obtenemos:
+    \begin{align*}
+        V_3 = -\frac{M_1}{M_3}V_1, \quad V_3 = -\frac{M_2}{M_3}V_2
+    \end{align*}
+    por conservación de la energía 
+    \[T_i = T_f-Q \] 
+    cálculamos $T_i$:
+    \begin{align*}
+        T_i 
+        &= T_1 - T_3 \\
+        &= T_1 - \frac{M_3}{2}V_3 \\
+        &= T_1 - \left( \frac{1}{2}M_1V_1^2 \right)\frac{M_1}{M_3} \\
+        &= T_1\left( 1 - \frac{M_1}{M_3} \right) \\
+        &= T_1\left( \frac{M_3-M_1}{M_3} \right)
+    \end{align*}
+    de manera análoga encontramos $T_f$:
+    \begin{align*}
+        T_f 
+        &= T_2 + T_3 \\
+        &= T_2\left( \frac{M_3+M_2}{M_3} \right)
+    \end{align*}
+    sustituimos en la igualdad y despejamos $T_2$:
+    \begin{align*}
+        T_i &= T_f-Q \\
+        T_1\left( \frac{M_3-M_1}{M_3} \right) &= T_2\left( \frac{M_3+M_2}{M_3} \right) \\
+        T_2 &= \frac{M_3}{M_2+M_3}\left( Q + \frac{M_3-M_1}{M_3}T_1 \right)
+    \end{align*}
 \end{tcolorbox}
 
 \section*{5.-}
