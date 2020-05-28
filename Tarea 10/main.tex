@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 15cm
+\topmargin = -2.5cm 
+\oddsidemargin = 1.5cm
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\usepackage{amsmath}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{adjustbox}
+\usepackage{bm} 
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\title{Tarea 10 Mecánica Analítica}
+\author{Cerritos Lira Carlos}
+\date{27 de Mayo del 2020}
+
+\begin{document}
+\maketitle
+\section*{1.-}
+\subsection*{7.2 a)}
+Hállese las fuerzas centrales bajo cuya acción una partícula seguirá las órbitas
+\[ r = a(1+cos \theta)\]
+\begin{tcolorbox}[breakable]
+    Primero hacemos cuentas:
+    \begin{align*}
+        r &= a(1+cos\theta) \\
+        u &= \frac{1}{a(1+cos\theta)} \\
+        \frac{du}{d\theta} &= \frac{sin\theta}{a(1+cos\theta)^2} \\
+        \frac{d^2u}{d\theta^2} &= \frac{sin^2\theta + cos\theta + 1}{a(cos\theta+1)^3} 
+    \end{align*}
+    Suponemos que la fuerza es de la forma:
+    \begin{align*}
+        \bm{F}(r) &= F(r)\bm{e}_r \\
+        m\bm{a} &= F(r)\bm{e}_r \\
+        m(\ddot{r}-r\dot{\theta}^2)\bm{e}_r + (r\ddot{\theta} + 2\dot{r} \dot{\theta})\bm{e}_\theta &= F(r)\bm{e}_r \\ 
+    \end{align*}
+    de donde obtenemos:
+    \begin{align*}
+        r\ddot{\theta} + 2\dot{r}\dot{\theta} &= 0 \\
+        r^2\ddot{\theta} + 2r\dot{r}\dot{\theta} &= 0 \\
+        \frac{d}{dt}(r^2\dot{\theta}) &= 0 \\
+        r^2\dot{\theta} &= h
+    \end{align*}
+    sabemos que se cumple:
+    \begin{align*}
+        F(r) &= -\frac{h^2}{m}u^2(u+\tfrac{d^2u}{d\theta^2}) \\
+        &= -\frac{h^2}{m}u^2\left[\frac{1}{a(1+cos\theta)}+\frac{sin^2+cos\theta + 1}{a(cos\theta+1)^3}\right] \\
+        &= -\frac{h^2}{m}u^2\left[\frac{(1+cos\theta)^2+sin^2\theta+cos\theta+1}{a(cos\theta+1)^3}\right] \\
+        &= -\frac{h^2}{m}u^2\left[\frac{1+2cos\theta+cos^2\theta+sin^2\theta+cos\theta+1}{a(cos\theta+1)^3}\right] \\
+        &= -\frac{h^2}{m}u^2\left[\frac{3+3cos\theta}{a(cos\theta+1)^3} \right] \\
+        &= -\frac{h^2}{m}u^2\left[\frac{3aa(1+cos\theta}{r^3} \right] \\
+        &= -\frac{h^2}{m}\frac{1}{r^2}\frac{3ar}{r^3} \\
+        &= -\frac{h^23a}{m}\frac{1}{r^4}
+    \end{align*}
+\end{tcolorbox}
+
+\section*{2.-}
+\subsection*{7.10)}
+Hállese la velocidad de escape de una partícula de la superficie de la Tierra, dado que la constante 
+gravitacional es:
+\[ G = 6.67 \times 10^{-11} \frac{Nm^2}{kg^2} \]
+\begin{tcolorbox}[breakable]
+    Como la energía mecánica para una partícula sometida a la fuerza de gravedad de la Tierra se conserva:
+    \begin{align*}
+        T_1 + U_1 &= T_2 + U_2 \\
+        \frac{1}{2}mv_{escape}^2 - \frac{GM_Tm}{R_T} &= \frac{1}{2}mv_{2}^2 - \frac{GM_Tm}{R_2} \\
+        \frac{1}{2}mv_{escape}^2 - \frac{GM_Tm}{R_T} &= 0 \\
+        v_{escape} 
+        &= \sqrt{\frac{2GM_T}{R_T}} \\
+        &= \sqrt{\frac{2 \cdot 6.67 \times 10^{-11} \cdot 5.976 \times 10^{24}}{6378}} \\
+        &= 11.2\frac{km}{s} 
+    \end{align*}
+\end{tcolorbox}
+\newpage
+
+\section*{3.-}
+\subsection*{Esféra homógenea}
+\begin{tcolorbox}[breakable]
+    Dado un eje arbitrario que pasa por el centro de masa, tomemos un sistema de referencia tal que 
+    este eje es $z$, debido a la simétria de la esféra:
+    \begin{align*}
+        3I_{zz}
+        &= I_{zz}+I_{xx}+I_{yy} \\
+        &= \int_S 2(x^2+y^2+z^2)\rho(x,y,z) dxdydz\\
+        &= \int_{0}^R \int_{0}^{2\pi} \int_{0}^{\pi} 2r^4sin\phi \frac{3M}{4\pi R^3} dr d\theta d\phi \\
+        &= \frac{3M}{4\pi R^3} \cdot \frac{R^5}{5} \cdot 4\pi \cdot 2 \\
+        &= \frac{6}{5}MR^2 \\
+        I_{zz}
+        &= \frac{2}{5}MR^2
+    \end{align*}
+\end{tcolorbox}
+
+\section*{4.-}
+\subsection*{Anillo cilíndrico homogéneo}
+\begin{tcolorbox}[breakable]
+    Tomamos un sistema de referencia tal que el eje de simétria es el eje $z$, tenemos entonces:
+    \begin{align*}
+        I_{zz} 
+        &= \int_{Ring} (x^2+y^2) \rho(x,y,z) dxdydz \\
+        &= \int_{-\frac{h}{2}}^\frac{h}{2} \int_{0}^{2\pi} \int_{R_1}^{R_2} r^3 \frac{M}{\pi(R_2^2-R_1^2)h} dr d\theta dz \\
+        &= \frac{M}{\pi(R_2^2-R_1^2)h} h 2\pi \frac{R_2^4-R_1^4}{4} \\
+        &= \frac{1}{2} M\frac{R_2^4-R_1^4}{R_2^2-R_1^2} \\
+        &= \frac{1}{2} M(R_2^2+R_1^2) \\
+        &\approx MR_2   ^2
+    \end{align*}
+\end{tcolorbox}
+
+\end{document}

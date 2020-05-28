@@ -19,7 +19,7 @@
 
 \title{Tarea 9 Mecánica Analítica}
 \author{Cerritos Lira Carlos}
-\date{8 de Mayo del 2020}
+\date{15 de Mayo del 2020}
 
 \begin{document}
 \maketitle
@@ -153,26 +153,37 @@ cada pieza durante la explosión.
 \section*{3.-}
 \subsection*{8.2)}
 Un núcleo, originalmente en reposo, se desintegra por la emisión de un electrón, cuya 
-cantidad de movimiento es $1.73 \frac{Mev}{C}$ y, perpendicularmente a la dirección del
-electrón, de un neutrino cuya cantidad de movimiento es $1.0\frac{Mev}{c}$. ¿En qué dirección y 
-sentido recaulará el núcleo?. ¿Cuál será su cantidad de movimiento en $\frac{Mev}{c}$. 
-$3.90 \times 10^{-22}g$. Si la masa del núcleo restante es 
-$3.9 \times 10^{-22}g$, ¿cuál será su energía cinética en electrón volts? 
+cantidad de movimiento es $1.73 \frac{Mev}{c}$ y, perpendicularmente a la dirección del
+electrón, de un neutrino cuya cantidad de movimiento es $1.0\frac{Mev}{c}$. 
+\begin{enumerate}
+    \item ¿En qué dirección y sentido recaulará el núcleo?.
+    \item ¿Cuál será su cantidad de movimiento en $\frac{Mev}{c}$. 
+    \item Si la masa del núcleo restante es $3.9 \times 10^{-22}g$.¿Cuál será su energía cinética en electrón volts?. 
+\end{enumerate}
 \begin{tcolorbox}[breakable]
-    Usamos nuevamente la conservación del momento para un sistema de partículas donde $\bm{F}^{ext} = 0$, donde tenemos:
+    \subsubsection*{1.}
+    Usamos conservación del momento para un sistema de partículas donde $\bm{F}^{ext} = 0$, donde tenemos:
     \begin{align*}
         \bm{p}_1 + \bm{p}_2 + \bm{p}_3 &= 0 \\
         p_1\bm{i} + p_2\bm{j} + \bm{p}_3 &= 0 \\
         \bm{p}_3 &= -(p_1\bm{i} + p_2\bm{j})
     \end{align*}
-    por lo tanto:
-    \[ p_3^2 = p_1^2 + p_2^2 \]
+    \subsubsection*{2.}
+    De la ultima relación obtenida tenemos
+    \begin{align*}
+        p_3^2 &= p_1^2 + p_2^2 \\
+        p_3 
+        &= (p_1^2+p_2^2)^{\frac{1}{2}} \\
+        &= 1.99 \frac{Mev}{c}  
+    \end{align*}
+    \subsubsection*{3.}
+    Por definición:
     \begin{align*}
         T_3 
         &= \frac{1}{2}m_3v^2 \\
         &= \frac{1}{2m_3}p_3^2 \\
-        &= \frac{1}{2(3.9 \times 10^{-25})}(8.5 \times 10^{-31} + 2.84 \times 10^{-31}) \\
-        &= \frac{1.134 \times 10^{-30}}{7.8 \times 10^{-25}} \\
+        &= \frac{1}{2(3.9 \times 10^{-25})}(8.5 \times 10^{-31} + 2.84 \times 10^{-31}) \frac{kg^2m^2}{s^2} \\
+        &= \frac{1.134 \times 10^{-30}}{7.8 \times 10^{-25}} \frac{kgm^2}{s^2} \\
         &= 1.45 \times 10^{-6}J \\
         &= 9.10^6 MeV
     \end{align*}
