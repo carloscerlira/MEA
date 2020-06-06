@@ -136,15 +136,108 @@ paralelo al eje del condensador.
         \includegraphics[scale=0.7]{p2_atwood.png}
         \caption{Máquina de Atwood doble}
     \end{figure}
-    \item Encuentre las tensiones en las cuerdas y las aceleraciones de las masas de forma explicita, expresandolas(tanto las tensiones como las acelraciones)
+    \item Encuentre las tensiones en las cuerdas y las aceleraciones de las masas de forma explicita, expresandolas(tanto las tensiones como las aceleraciones)
     solo en términos de $g$ y las masas $(m_1,m_2,m_3)$. \\
     \textit{Hint:1 Derive dos veces las constricciones respecto al tiempo, esto podría llevar a ecuaciones que pueden facilitar 
     el álgebra para despejar los valores que se pdien.} \\
     \textit{Hint 2: Las tensiones de las cuerdas son las fuerzas de constricción.} 
-    \[ T_i = Q_i = \sum{k}\lambda_k \frac{\partial \phi_k}{\partial q_i} \]
+    \[ T_i = Q_i = \sum_k \lambda_k \frac{\partial \phi_k}{\partial q_i} \]
 \end{enumerate}
 \begin{tcolorbox}[breakable]
-    
+    \subsubsection*{a)}
+    Supongamos que las cuerdas son de longitud $l_1$ y $l_2$ respectivamente, usando las coordenadas generalizadas
+    descritas en la figura 2 obtenemos:
+    \begin{align*}
+        \bm{r}_1 &= -x_1 \bm{i} \\
+        \bm{r}_2 &= -(x_4+x_2) \bm{i} \\
+        \bm{r}_3 &= -(x_4+x_3)\bm{i}
+    \end{align*}
+    tenemos las constricciones:
+    \begin{align*}
+        \phi_1(x_1,x_2,x_3,x_4) &= x_1 + x_4 - l_1 = 0 \\
+        \phi_2(x_1,x_2,x_3,x_4) &= x_2 + x_3 - l_2 = 0 
+    \end{align*}
+    bajo estas coordenadadas se tiene:
+    \begin{align*}
+        T
+        &= T_1 + T_2 + T_3 \\
+        &=\frac{1}{2}m_1\dot{x}_1^2 
+        + \frac{1}{2}m_2(\dot{x}_4 + \dot{x}_2)^2
+        + \frac{1}{2}m_3(\dot{x}_4 + \dot{x}_3)^2 \\
+        U 
+        &= U_1 + U_2 + U_3 \\
+        &= -m_1gx_1-m_2g(x_4+x_2)-m_3g(x_4+x_3)
+    \end{align*}
+    usando las ecuaciones de Lagrange obtenemos:
+    \begin{align*}
+        \frac{\partial L}{\partial q_i} 
+        -\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} 
+        + \sum_k \lambda_k \frac{\partial \phi_k}{\partial q_i}
+        &= 0  
+    \end{align*}
+    para $x_1$ tenemos:
+    \begin{align*}
+        \frac{\partial L}{\partial x_1} 
+        -\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_1} 
+        + \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_1}
+        &= 0  \\
+        m_1g - m_1\ddot{x}_1 + \lambda_1 &= 0 \\
+        \ddot{x}_1 &= \frac{\lambda_1}{m_1} + g
+    \end{align*}
+    para $x_4$ tenemos:
+    \begin{align*}
+        \frac{\partial L}{\partial x_4} 
+        -\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_4} 
+        + \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_4}
+        &= 0  \\
+        m_2g+m_3g - m_2(\ddot{x}_4+\ddot{x}_2) - m_3(\ddot{x}_4+\ddot{x}_3) + \lambda_1 &= 0
+    \end{align*}
+    para $x_2$ tenemos:
+    \begin{align*}
+        \frac{\partial L}{\partial x_2} 
+        -\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_2} 
+        + \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_2}
+        &= 0  \\
+        m_2g-m_2(\ddot{x}_4+\ddot{x}_2) + \lambda_2 &= 0 \\
+        \ddot{x}_4+\ddot{x}_2 &= \frac{\lambda_2}{m_2} + g
+    \end{align*}
+    para $x_3$ tenemos:
+    \begin{align*}
+        \frac{\partial L}{\partial x_3} 
+        -\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_3} 
+        + \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_3}
+        &= 0  \\
+        m_3g - m_3(\ddot{x}_4+\ddot{x}_3) + \lambda_1 &= 0 \\
+        \ddot{x}_4+ \ddot{x}_3 &= \frac{\lambda_2}{m_3}+g
+    \end{align*}
+    usando la relación para $x_4,x_2$ y $x_3$ se obtiene una relación entre $\lambda_1$ y $\lambda_2$:
+    \begin{align*}
+        \lambda_1 
+        &= m_2(\ddot{x}_4+\ddot{x}_2) + m_3(\ddot{x}_4+\ddot{x}_3) - g(m_2+m_3) \\
+        &= \lambda_2 + \lambda_2 + g(m_2+m_3) - g(m_2+m_3) \\
+        &= 2\lambda_2 
+    \end{align*}
+    de las ecuaciones de constricción tenemos además:
+    \begin{align*}
+        \ddot{x_1}+\ddot{x_4} &= 0 \\
+        \ddot{x_2}+\ddot{x_3} &= 0 \\ 
+        \ddot{x_1}-\ddot{x_2} &= -(\ddot{x_4}+\ddot{x}_2) = -\tfrac{\lambda_2}{m_1}-g \\
+        \ddot{x_1}+\ddot{x_2} &= -(\ddot{x}_4+\ddot{x}_3) = -\tfrac{\lambda_2}{m_3}-g 
+    \end{align*}
+    despejamos $x_1$ y usamos la relación obtenida para esta coordenada anteriormente:
+    \begin{align*}
+        2\ddot{x}_2 &= -\tfrac{\lambda_2}{m_1}-\tfrac{\lambda_2}{m_3}-2g \\
+        2(\tfrac{\lambda_1}{m_1}+g) &= -\tfrac{\lambda_2}{m_1}-\tfrac{\lambda_2}{m_3}-2g \\
+        4g &= -\lambda_2(\tfrac{4}{m_1}+\tfrac{1}{m_1}+\tfrac{1}{m_2}) \\
+        \lambda_2 &= \frac{4g}{\tfrac{4}{m_1}+\tfrac{1}{m_1}+\tfrac{1}{m_2}} 
+    \end{align*} 
+    \subsubsection*{b)}
+    La tensión para la cuerda $1$ es:
+    \begin{align*}
+        T_1 &= \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_1} = \lambda_1 = 2\lambda_2 \\
+        T_2 &= \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_2} = \lambda_2
+    \end{align*}
+
 \end{tcolorbox}
 
 \section*{3.-}
@@ -165,6 +258,11 @@ El sistema del eje y las bolas giran con velocidad angular constante $w$.
     y determínese la frecuencia de las pequeñas oscilaciones de $z$ a un lado y otro de su valor estacionario.
 \end{enumerate}
 \begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+
+    \subsubsection*{b)}
+    
+    \subsubsection*{c)}
 
 \end{tcolorbox}
 
