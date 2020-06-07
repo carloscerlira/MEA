@@ -17,7 +17,7 @@
 
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
-\title{Partial II Mecánica Analítica}
+\title{Parcial II Mecánica Analítica}
 \author{Cerritos Lira Carlos}
 \date{8 de Junio del 2020}
 
@@ -31,9 +31,9 @@ que hay entre las placas de un condensador cilíndrico, y en un campo magnético
 \[ \bm{B} = B\bm{k} \]
 paralelo al eje del condensador.
 \begin{enumerate}[a)]
-    \item Establecer las ecuaciones de movmiento de la partícula en coordenadas cilíndricas.
-    \item Demostrar que la ecuación de movmimiento, en función de la variable anular $\phi$, que es 
-    una coordenada que se puede no considerar, se resuelve fácilmente y da como integral de movmiento 
+    \item Establecer las ecuaciones de movimiento de la partícula en coordenadas cilíndricas.
+    \item Demostrar que la ecuación de movimiento, en función de la variable anular $\phi$, que es 
+    una coordenada que se puede no considerar, se resuelve fácilmente y da como integral de movimiento 
     \[ m\rho^2\dot{\phi} + \frac{1}{2}e\rho^2B = h = constante \]
     \item Demuestrar que, utilizando el resultado hallado en $b)$, la ecuación radial se puede 
     reducir a una ecuación de movimiento unidimensional, que nos dará una segunda integral del movimiento 
@@ -104,7 +104,7 @@ paralelo al eje del condensador.
         mz &= 0
     \end{align*}
     \subsubsection*{b)}
-    De la ecuación de movmiento obtenida en $a)$, para $\phi$ se tiene:
+    De la ecuación de movimiento obtenida en $a)$, para $\phi$ se tiene:
     \begin{align*}
         \frac{d}{dt}(m\rho^2\dot{\phi} + \frac{1}{2}eB\rho^2) &= 0 \\
         m\rho^2\dot{\phi} + \frac{1}{2}e\rho^2B &= h
@@ -125,7 +125,7 @@ paralelo al eje del condensador.
     \end{align*}
 
 \end{tcolorbox}
-
+\newpage
 \section*{2.-}
 \begin{enumerate}[a)]
     \item Establezca las ecuaciones de Euler-Lagrange para la máquina de Atwood doble, 
@@ -148,9 +148,9 @@ paralelo al eje del condensador.
     Supongamos que las cuerdas son de longitud $l_1$ y $l_2$ respectivamente, usando las coordenadas generalizadas
     descritas en la figura 2 obtenemos:
     \begin{align*}
-        \bm{r}_1 &= -x_1 \bm{i} \\
-        \bm{r}_2 &= -(x_4+x_2) \bm{i} \\
-        \bm{r}_3 &= -(x_4+x_3)\bm{i}
+        \bm{r}_1 &= -x_1 \bm{j} \\
+        \bm{r}_2 &= -(x_4+x_2) \bm{j} \\
+        \bm{r}_3 &= -(x_4+x_3) \bm{j}
     \end{align*}
     tenemos las constricciones:
     \begin{align*}
@@ -232,14 +232,14 @@ paralelo al eje del condensador.
         \lambda_2 &= \frac{4g}{\tfrac{4}{m_1}+\tfrac{1}{m_1}+\tfrac{1}{m_2}} 
     \end{align*} 
     \subsubsection*{b)}
-    La tensión para la cuerda $1$ es:
+    La tensión para la cuerda las cuerdas es:
     \begin{align*}
         T_1 &= \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_1} = \lambda_1 = 2\lambda_2 \\
         T_2 &= \sum_k \lambda_k \frac{\partial \phi_k}{\partial x_2} = \lambda_2
     \end{align*}
 
 \end{tcolorbox}
-
+\newpage
 \section*{3.-}
 En la fig.3 se muestra un regulador centrífugo de una máquina de vapor. Dos bolas, cada una de masa $m$, están unidas por cuatro brazos articulados, 
 cada uno de longitud $l$, a unos manguitos colocados sobre un eje redondo vertical. El manguito superior está sujeto al eje; el inferior, de masa $M$, 
@@ -253,16 +253,82 @@ El sistema del eje y las bolas giran con velocidad angular constante $w$.
 
 \begin{enumerate}[a)]
     \item Escriba el lagrangiano del sistema.
-    \item Obtenga las ecuaciones de movmimiento, despreciando el pesos de los brazos y el eje. Estúdiese el movmiento por el método de la energía.
+    \item Obtenga las ecuaciones de movimiento, despreciando el pesos de los brazos y el eje. Estúdiese el movimiento por el método de la energía.
     \item Determínese la altura, $z$ del magnuito inferior por encima de su posición más baja, en función de $w$ para la rotación estacionaria de las bolas 
     y determínese la frecuencia de las pequeñas oscilaciones de $z$ a un lado y otro de su valor estacionario.
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-
+    Usaremos las coordenadada generalizada $\theta$, se tiene:
+    \begin{align*}
+        \bm{r}_1 &= l \sin\theta \sin wt\bm{i} + l\sin\theta \cos wt \bm{j} - l\cos\theta \bm{k}\\
+        \bm{\dot{r}}_1 
+        &=(l\dot{\theta} \cos\theta \sin wt + lw \sin\theta \cos wt) \bm{i} 
+        + (l\dot{\theta} \cos\theta \cos wt - lw\sin\theta \sin wt)\bm{j}
+        - l\dot{\theta} \sin\theta \bm{k} \\
+        \dot{r}_1^2 
+        &=l^2\dot{\theta}^2cos^2\theta + l^2\dot{\theta}\sin^2\theta 
+        = l^2\dot{\theta}^2 + l^2w^2\sin^2\theta \\ 
+        \bm{r}_2 &= -2l \cos \theta \bm{k} \\
+        \dot{r}_2^2 &= 4l^2\dot{\theta}^2\sin^2\theta
+    \end{align*}
+    de donde obtenemos:
+    \begin{align*}
+        T 
+        &= 2T_1 + T_2 \\
+        &= m(l^2\dot{\theta}^2+l^2w^2sin^2\theta) + 2Ml^2\dot{\theta}^2 \sin^2\theta \\
+        U
+        &= -2mglcos\theta - 2Mglcos\theta
+    \end{align*}
+    cálculamos el Lagrangiano por definición:
+    \begin{align*}
+        L 
+        &= T-U \\
+        &= m(l^2\dot{\theta}^2+l^2w^2sin^2\theta) + 2Ml^2\dot{\theta}^2 \sin^2\theta + 2gl(m\cos\theta + M\cos\theta)
+    \end{align*}
     \subsubsection*{b)}
-    
+    Para $\theta$ obtenemos:
+    \begin{align*}    
+        \frac{\partial L}{\partial \theta} 
+        &=2ml^2w^2\sin\theta \cos\theta 
+        + 4Ml^2\dot{\theta}^2\sin\theta \cos\theta 
+        -2glsin\theta(m+M) \\
+        \frac{d}{dt}\frac{\partial L}{\partial \dot{\theta}} 
+        &= \frac{d}{dt}(2ml^2\dot{\theta} + 4Ml^2\dot{\theta}\sin^2\theta) 
+        = 2ml^2\ddot{\theta} + 4Ml^2(\ddot{\theta}\sin^2\theta + 2\dot{\theta}^2\sin\theta \cos\theta)
+    \end{align*}
+    Utilizando la relación:
+    \begin{align*}
+        \frac{\partial L}{\partial \theta} - \frac{d}{dt}\frac{\partial L}{\partial \dot{\theta}} &= 0 \\
+        2ml^2w^2\sin\theta \cos\theta 
+        -4Ml^2\dot{\theta}^2\sin\theta \cos\theta 
+        -2glsin\theta(m+M) 
+        -2l^2\ddot{\theta}(m + 2M\sin^2\theta)  
+        &= 0
+    \end{align*}
     \subsubsection*{c)}
+    En una rotación estaconaria se tiene $\dot{\theta} = 0, \ddot{\theta} = 0$, usando la ecuación de $b)$ para $\theta$ obtenemos:
+    \begin{align*}
+        2ml^2w^2\sin\theta \cos\theta 
+        -2gl\sin\theta(m+M)   
+        &= 0 \\
+        2ml^2w^2\sin\theta \cos\theta
+        &= 2gl\sin\theta(m+M) \\
+        cos\theta &= \tfrac{g}{lw^2}(1+\tfrac{M}{m})
+    \end{align*} 
+    $z$ se pude obtener como:
+    \begin{align*}
+        z 
+        &= 2l(1-cos\theta) \\
+        &= 2l[1-\tfrac{g}{lw^2}(1+\tfrac{M}{m})]
+    \end{align*}
+    ahora bien, si tomamos $w=0,M=0$, de la ecacuión para $\theta$ obtenida en $b)$ tenemos:
+    \begin{align*}
+        2glmsin\theta 
+        +2ml^2\ddot{\theta}  
+        &= 0 \\
+        \ddot{\theta} + \frac{g}{l}sin\theta &= 0
+    \end{align*} 
 
 \end{tcolorbox}
 
